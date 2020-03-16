@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="ap" fx:id="userAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FXMLUserAdminController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+          <AnchorPane fx:id="userTabPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TabPane prefHeight="700.0" prefWidth="713.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="Client">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #647495;">
+                                 <children>
+                                    <TableView id="table_users" fx:id="table_client" layoutX="10.0" layoutY="10.0" onMouseClicked="#selectcl" prefHeight="561.0" prefWidth="869.0" style="-fx-background-color: #647495;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn fx:id="login" prefWidth="100.0" sortType="DESCENDING" text="Login" />
+                                          <TableColumn fx:id="nom" prefWidth="100.0" text="Nom" />
+                                          <TableColumn fx:id="prenom" prefWidth="100.0" text="Prenom" />
+                                          <TableColumn fx:id="mdp" prefWidth="100.0" text="Mot de passe" />
+                                          <TableColumn fx:id="email" prefWidth="100.0" text="E-mail" />
+                                          <TableColumn fx:id="tel" prefWidth="100.0" text="Numero Tel" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Button layoutX="925.0" layoutY="467.0" mnemonicParsing="false" onAction="#deletecl" text="Delete" AnchorPane.rightAnchor="225.0" />
+                                    <Label layoutX="845.0" layoutY="157.0" text="Login" AnchorPane.rightAnchor="250.0" />
+                                    <Label layoutX="847.0" layoutY="193.0" text="Nom" AnchorPane.rightAnchor="250.0" />
+                                    <Label layoutX="839.0" layoutY="229.0" text="Prenom" AnchorPane.rightAnchor="250.0" />
+                                    <Label layoutX="843.0" layoutY="266.0" text="E-mail" AnchorPane.rightAnchor="250.0" />
+                                    <Label layoutX="829.0" layoutY="304.0" text="Numero Tel" AnchorPane.rightAnchor="250.0" />
+                                    <TextField fx:id="logintf1" layoutX="927.0" layoutY="153.0" AnchorPane.rightAnchor="30.0" />
+                                    <TextField fx:id="nomtf1" layoutX="927.0" layoutY="189.0" AnchorPane.rightAnchor="30.0" />
+                                    <TextField fx:id="prenomtf1" layoutX="927.0" layoutY="225.0" AnchorPane.rightAnchor="30.0" />
+                                    <TextField fx:id="emailtf1" layoutX="927.0" layoutY="262.0" AnchorPane.rightAnchor="30.0" />
+                                    <TextField fx:id="numteltf1" layoutX="926.0" layoutY="300.0" AnchorPane.rightAnchor="30.0" />
+                                    <Button layoutX="1068.0" layoutY="467.0" mnemonicParsing="false" onAction="#Ajoutercl" text="Ajouter" AnchorPane.rightAnchor="75.0" />
+                                    <Label layoutX="825.0" layoutY="341.0" text="Mot de Passe" AnchorPane.rightAnchor="250.0" />
+                                    <TextField fx:id="mdptf1" layoutX="926.0" layoutY="337.0" AnchorPane.rightAnchor="30.0" />
+                                    <Button layoutX="994.0" layoutY="467.0" mnemonicParsing="false" onAction="#modcl" text="Modify" AnchorPane.rightAnchor="150.0" />
+                                    <Button layoutX="835.0" layoutY="467.0" mnemonicParsing="false" onAction="#clearcl" text="clear" AnchorPane.rightAnchor="313.0" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab fx:id="employeTab" text="Employe">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #647495;">
+                                 <children>
+                                    <TableView id="table_users" fx:id="table_employe" onMouseClicked="#selectEm" prefHeight="561.0" prefWidth="869.0" style="-fx-background-color: #647495;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn fx:id="login1" prefWidth="109.0" sortType="DESCENDING" text="Login" />
+                                          <TableColumn fx:id="nom1" prefWidth="124.0" text="Nom" />
+                                          <TableColumn fx:id="prenom1" prefWidth="90.0" text="Prenom" />
+                                          <TableColumn fx:id="mdp1" prefWidth="178.0" text="Mot de passe" />
+                                          <TableColumn fx:id="email1" minWidth="0.0" prefWidth="88.0" text="E-mail" />
+                                          <TableColumn fx:id="tel1" prefWidth="240.0" text="Numero Tel" />
+                                          <TableColumn fx:id="poste" prefWidth="75.0" text="Poste" />
+                                          <TableColumn fx:id="salaire" prefWidth="75.0" text="Salaire" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Button layoutX="841.0" layoutY="537.0" mnemonicParsing="false" onAction="#deleteem" text="Delete" AnchorPane.rightAnchor="296.0" />
+                                    <Label layoutX="859.0" layoutY="80.0" text="Login" AnchorPane.rightAnchor="250.0" />
+                                    <Label layoutX="861.0" layoutY="128.0" text="Nom" AnchorPane.rightAnchor="250.0" />
+                                    <Label layoutX="852.0" layoutY="174.0" text="Prenom" AnchorPane.rightAnchor="250.0" />
+                                    <Label layoutX="857.0" layoutY="228.0" text="E-mail" AnchorPane.rightAnchor="250.0" />
+                                    <Label layoutX="839.0" layoutY="275.0" text="Numero Tel" AnchorPane.rightAnchor="250.0" />
+                                    <Label layoutX="860.0" layoutY="336.0" text="Poste" AnchorPane.rightAnchor="250.0" />
+                                    <Label layoutX="856.0" layoutY="399.0" text="Salaire" AnchorPane.rightAnchor="250.0" />
+                                    <TextField fx:id="logintf" layoutX="917.0" layoutY="75.0" AnchorPane.rightAnchor="25.0" />
+                                    <TextField fx:id="nomtf" layoutX="917.0" layoutY="123.0" AnchorPane.rightAnchor="25.0" />
+                                    <TextField fx:id="prenomtf" layoutX="917.0" layoutY="180.0" AnchorPane.rightAnchor="25.0" />
+                                    <TextField fx:id="emailtf" layoutX="917.0" layoutY="234.0" AnchorPane.rightAnchor="25.0" />
+                                    <TextField fx:id="numteltf" layoutX="935.0" layoutY="286.0" AnchorPane.rightAnchor="25.0" />
+                                    <TextField fx:id="postetf" layoutX="927.0" layoutY="342.0" AnchorPane.rightAnchor="25.0" />
+                                    <TextField fx:id="salairetf" layoutX="927.0" layoutY="394.0" AnchorPane.rightAnchor="25.0" />
+                                    <Button layoutX="1088.0" layoutY="537.0" mnemonicParsing="false" onAction="#AjouterE" text="Ajouter" AnchorPane.rightAnchor="43.0" />
+                                    <Label layoutX="828.0" layoutY="462.0" text="Mot de Passe" AnchorPane.rightAnchor="250.0" />
+                                    <TextField fx:id="mdptf" layoutX="935.0" layoutY="457.0" AnchorPane.rightAnchor="25.0" />
+                                    <Button layoutX="1007.0" layoutY="537.0" mnemonicParsing="false" onAction="#modempl" text="Modify" AnchorPane.rightAnchor="126.0" />
+                                    <Button layoutX="936.0" layoutY="537.0" mnemonicParsing="false" onAction="#cleare" text="clear" AnchorPane.rightAnchor="212.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="buttonVBox" prefHeight="743.0" prefWidth="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="logo" fitHeight="100.0" fitWidth="206.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@agora.png" />
+                           </image>
+                        </ImageView>
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toViewVente" style="-fx-background-color: #34495E;" text="Gestion vente " textFill="WHITE" textOverrun="LEADING_ELLIPSIS" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toViewGestEquip" style="-fx-background-color: #34495E;" text="Gestion equipement " textFill="WHITE" VBox.vgrow="ALWAYS" />
+                        <Button contentDisplay="RIGHT" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #212F3D;" text="Gestion user " textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toViewStock" style="-fx-background-color: #34495E;" text="Gestion Stock " textFill="WHITE" VBox.vgrow="ALWAYS" />
+                        <Button fx:id="btncomptabilite" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toViewComptaAdmin" style="-fx-background-color: #34495E;" text="Gestion comptabilite" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toViewRec" style="-fx-background-color: #34495E;" text="Gestion Reclamation" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toViewAvis" style="-fx-background-color: #34495E;" text="Gestion Avis " textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toViewMark" style="-fx-background-color: #34495E;" text="Gestion marketing" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button contentDisplay="CENTER" layoutX="10.0" layoutY="689.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #34495E;" text="Logout" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="1.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #647495;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ModifierHistoriqueController">
+   <children>
+      <Label layoutX="53.0" layoutY="49.0" prefHeight="27.0" prefWidth="106.0" text="Operation " textFill="#070707">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="53.0" layoutY="106.0" text="Equipement " textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="79.0" layoutY="160.0" text="Qte">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TextField fx:id="qte" layoutX="170.0" layoutY="155.0" prefHeight="31.0" prefWidth="176.0" />
+      <ComboBox fx:id="operationc" layoutX="170.0" layoutY="44.0" onAction="#operationc" prefHeight="31.0" prefWidth="176.0" />
+      <Button fx:id="annuler" layoutX="432.0" layoutY="102.0" mnemonicParsing="false" onAction="#annuler" text="Annuler" textFill="#101011" />
+      <Button fx:id="valider" layoutX="432.0" layoutY="207.0" mnemonicParsing="false" onAction="#valider" prefHeight="31.0" prefWidth="72.0" text="Valider" />
+      <Label layoutX="78.0" layoutY="210.0" prefHeight="21.0" prefWidth="82.0" text="Id_m " textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="85.0" layoutY="261.0" text="Id_v" textFill="#171717">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TextField fx:id="id_v" layoutX="174.0" layoutY="256.0" prefHeight="31.0" prefWidth="176.0" />
+      <TextField fx:id="id_m" layoutX="172.0" layoutY="205.0" prefHeight="31.0" prefWidth="176.0" />
+      <ComboBox fx:id="equipementc" layoutX="170.0" layoutY="101.0" onAction="#equipementc" prefHeight="31.0" prefWidth="176.0" />
+      <Label layoutX="59.0" layoutY="313.0" text="Prix en (DT)">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="prix" layoutX="174.0" layoutY="310.0" prefHeight="31.0" prefWidth="176.0" />
+      <AnchorPane fx:id="invalid" layoutX="131.0" layoutY="166.0" prefHeight="153.0" prefWidth="317.0" style="-fx-background-color: #34495E;" visible="false">
+         <children>
+            <Button fx:id="oker" layoutX="150.0" layoutY="108.0" mnemonicParsing="false" onAction="#oker" text="Ok">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="invalidtext" layoutX="50.0" layoutY="56.0" prefHeight="21.0" prefWidth="216.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #647495;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ModifierEtatvController">
+   <children>
+      <ComboBox fx:id="etatc" layoutX="82.0" layoutY="169.0" onAction="#etatc" prefWidth="150.0" />
+      <Button fx:id="Confirmer" layoutX="339.0" layoutY="261.0" mnemonicParsing="false" onAction="#Confirmer" text="Confirmer" />
+      <Button fx:id="Annuler" layoutX="178.0" layoutY="261.0" mnemonicParsing="false" onAction="#Annuler" prefHeight="31.0" prefWidth="87.0" text="Annuler" />
+      <Label layoutX="170.0" layoutY="97.0" prefHeight="31.0" prefWidth="240.0" text="Changer l'etat de vehicule">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="31.0" layoutY="171.0" text="Etat">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="282.0" layoutY="169.0" text="Prix en (DT)">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="prix" layoutX="406.0" layoutY="167.0" prefHeight="31.0" prefWidth="135.0" />
+      <AnchorPane fx:id="invalid" layoutX="131.0" layoutY="166.0" prefHeight="153.0" prefWidth="317.0" style="-fx-background-color: #34495E;" visible="false">
+         <children>
+            <Button fx:id="oker" layoutX="150.0" layoutY="108.0" mnemonicParsing="false" onAction="#oker" text="Ok">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="invalidtext" layoutX="50.0" layoutY="56.0" prefHeight="21.0" prefWidth="216.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
